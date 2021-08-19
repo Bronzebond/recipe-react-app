@@ -17,8 +17,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
-apikey.js
-appId.js
+.env
+apikey.js 
+appid.js
 
 npm-debug.log*
 yarn-debug.log*

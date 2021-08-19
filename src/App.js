@@ -2,9 +2,10 @@ import "./App.css";
 import { React, useState, useEffect } from "react";
 import Recipe from "./Recipe";
 import API_KEY from "./apikey.js";
-import APP_ID from "./appId.js";
+import APP_ID from "./appid.js";
 
 function App() {
+  console.log(process.env);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("chicken");
