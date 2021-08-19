@@ -1,11 +1,17 @@
 import "./App.css";
 import { React, useState, useEffect } from "react";
 import Recipe from "./Recipe";
-import API_KEY from "./apikey.js";
-import APP_ID from "./appid.js";
+
+require("dotenv").config();
+const cors = require("cors");
+
+console.log(process.env);
+const API_KEY = process.env.REACT_APP_API_KEY;
+const APP_ID = process.env.REACT_APP_APP_ID;
+console.log(API_KEY);
+console.log(process.env.REACT_APP_API_KEY);
 
 function App() {
-  console.log(process.env);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("chicken");
